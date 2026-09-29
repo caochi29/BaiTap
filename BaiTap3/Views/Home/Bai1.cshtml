@@ -1,0 +1,218 @@
+﻿@{
+    ViewBag.Title = "Bài 1";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Phiếu tham gia CLB Tin học WIBU</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: white;
+        }
+
+        .container {
+            width: 650px;
+            margin: 40px auto;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+            .title span {
+                color: #00a8e8;
+                font-weight: bold;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #777;
+        }
+
+        td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+            td:first-child {
+                width: 160px;
+            }
+
+        input[type="text"],
+        select {
+            width: 180px;
+            padding: 5px;
+        }
+
+        .error {
+            color: red;
+            font-style: italic;
+            margin-left: 10px;
+        }
+
+        .success {
+            color: blue;
+            font-style: italic;
+        }
+
+        #btnDangKy {
+            padding: 4px 15px;
+        }
+
+        #soTruong {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="title">
+            PHIẾU THAM GIA CLB TIN HỌC
+            <span>WIBU</span>
+        </div>
+
+        <table>
+
+            <!-- Mã sinh viên -->
+            <tr>
+                <td>Mã sinh viên :</td>
+                <td>
+                    <input type="text"
+                           id="maSV"
+                           placeholder="Nhập Mã SV" />
+
+                    <span id="maSV_error"
+                          class="error"></span>
+                </td>
+            </tr>
+
+            <!-- Họ tên -->
+            <tr>
+                <td>Họ và tên :</td>
+                <td>
+                    <input type="text"
+                           id="hoTen"
+                           placeholder="Nhập Họ và tên" />
+
+                    <span id="hoTen_error"
+                          class="error"></span>
+                </td>
+            </tr>
+
+            <!-- Tuổi -->
+            <tr>
+                <td>Tuổi :</td>
+                <td>
+                    <input type="text"
+                           id="tuoi"
+                           placeholder="Nhập tuổi > 18" />
+
+                    <span id="tuoi_error"
+                          class="error"></span>
+                </td>
+            </tr>
+
+            <!-- Ngoại ngữ -->
+            <tr>
+                <td>Ngoại ngữ :</td>
+                <td>
+
+                    <label>
+                        <input type="checkbox"
+                               name="ngoaiNgu"
+                               value="Anh" />
+                        Anh
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="ngoaiNgu"
+                               value="Pháp" />
+                        Pháp
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                               name="ngoaiNgu"
+                               value="Nhật" />
+                        Nhật
+                    </label>
+
+                    <span id="ngoaiNgu_error"
+                          class="error"></span>
+
+                </td>
+            </tr>
+
+            <!-- Chuyên ngành -->
+            <tr>
+                <td>Chuyên ngành :</td>
+                <td>
+
+                    <select id="chuyenNganh"
+                            onchange="hienThiSoTruong()">
+
+                        <option value="hethong">
+                            Hệ thống
+                        </option>
+
+                        <option value="phanmem">
+                            Phần mềm
+                        </option>
+
+                        <option value="mang">
+                            Mạng máy tính
+                        </option>
+
+                    </select>
+
+                </td>
+            </tr>
+
+            <!-- Sở trường -->
+            <tr>
+                <td>Sở trường :</td>
+
+                <td>
+                    <span id="soTruong">
+                        Phân tích &amp; Thiết kế
+                    </span>
+                </td>
+            </tr>
+
+            <!-- Đăng ký -->
+            <tr>
+                <td></td>
+
+                <td>
+
+                    <input type="button"
+                           id="btnDangKy"
+                           value="Đăng ký"
+                           onclick="dangKy()" />
+
+                    <span id="ketQua"
+                          class="success"></span>
+
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Kết nối file JavaScript -->
+    <script src="~/Scripts/Bai1.js"></script>
+
+</body>
+</html>

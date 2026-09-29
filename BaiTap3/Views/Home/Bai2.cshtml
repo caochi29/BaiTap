@@ -1,0 +1,219 @@
+﻿@{
+    ViewBag.Title = "Bài 2 - Thông tin giao hàng";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title>Thông tin giao hàng</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: white;
+        }
+
+        .container {
+            width: 650px;
+            margin: 40px auto;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #777;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+            td:first-child {
+                width: 180px;
+            }
+
+        input[type="text"] {
+            width: 250px;
+            padding: 6px;
+        }
+
+        .error {
+            display: block;
+            color: red;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .button {
+            padding: 7px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="title">
+            THÔNG TIN GIAO HÀNG
+        </div>
+
+        <table>
+
+            <!-- Tên -->
+            <tr>
+                <td>Tên:</td>
+                <td>
+
+                    <input type="text"
+                           id="hoTen"
+                           placeholder="Nhập họ tên" />
+
+                    <span id="hoTen_error"
+                          class="error"></span>
+
+                </td>
+            </tr>
+
+
+            <!-- Địa chỉ -->
+            <tr>
+                <td>Địa chỉ:</td>
+                <td>
+
+                    <input type="text"
+                           id="diaChi"
+                           placeholder="Nhập địa chỉ" />
+
+                    <span id="diaChi_error"
+                          class="error"></span>
+
+                </td>
+            </tr>
+
+
+            <!-- Tỉnh / Thành phố -->
+            <tr>
+                <td>Tỉnh / Thành phố:</td>
+                <td>
+
+                    <input type="text"
+                           id="tinhThanh"
+                           placeholder="Nhập tỉnh / thành phố" />
+
+                    <span id="tinhThanh_error"
+                          class="error"></span>
+
+                </td>
+            </tr>
+
+
+            <!-- Quận / Huyện -->
+            <tr>
+                <td>Quận / Huyện:</td>
+                <td>
+
+                    <input type="text"
+                           id="quanHuyen"
+                           placeholder="Nhập quận / huyện" />
+
+                    <span id="quanHuyen_error"
+                          class="error"></span>
+
+                </td>
+            </tr>
+
+
+            <!-- Phường / Xã -->
+            <tr>
+                <td>Phường / Xã:</td>
+                <td>
+
+                    <input type="text"
+                           id="phuongXa"
+                           placeholder="Nhập phường / xã" />
+
+                    <span id="phuongXa_error"
+                          class="error"></span>
+
+                </td>
+            </tr>
+
+
+            <!-- Số điện thoại -->
+            <tr>
+                <td>Số điện thoại:</td>
+                <td>
+
+                    <input type="text"
+                           id="soDienThoai"
+                           placeholder="Nhập số điện thoại" />
+
+                    <span id="soDienThoai_error"
+                          class="error"></span>
+
+                </td>
+            </tr>
+
+
+            <!-- Hình thức giao hàng -->
+            <tr>
+                <td>Giao hàng:</td>
+
+                <td>
+
+                    <input type="button"
+                           class="button"
+                           value="Văn phòng"
+                           onclick="chonNoiNhan('vanphong')" />
+
+                    <input type="button"
+                           class="button"
+                           value="Nhà riêng"
+                           onclick="chonNoiNhan('nha')" />
+
+                </td>
+            </tr>
+
+
+            <!-- Nút Lưu -->
+            <tr>
+                <td></td>
+
+                <td>
+
+                    <input type="button"
+                           class="button"
+                           value="Lưu"
+                           onclick="luuThongTin()" />
+
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+
+    <!-- Kết nối JavaScript -->
+    <script src="~/Scripts/Bai2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Bài 3 - Đồng hồ điện tử";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <title>Đồng hồ điện tử</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: white;
+        }
+
+        .container {
+            width: 600px;
+            margin: 60px auto;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        #dongHo {
+            font-size: 45px;
+            font-weight: bold;
+            border: 1px solid #555;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        #ngayHienTai {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 6px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="title">
+            BÀI 3 - ĐỒNG HỒ ĐIỆN TỬ
+        </div>
+
+        <!-- Giống ví dụ trong PDF -->
+        <input type="button"
+               value="Hôm nay"
+               onclick="hienThiNgay()" />
+
+        <!-- Hiển thị ngày -->
+        <div id="ngayHienTai"></div>
+
+        <!-- Đồng hồ -->
+        <div id="dongHo">
+            00:00:00
+        </div>
+
+    </div>
+
+    <script src="~/Scripts/Bai3.js"></script>
+
+</body>
+</html>
